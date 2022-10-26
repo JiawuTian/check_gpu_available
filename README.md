@@ -12,7 +12,7 @@ gpu_available(usage_demand: float=50.0, men_demand: float=1024.0, interval: int=
 ```
 Explanation of parameters: 
 1. ```usage_demand```: The required percentage (%) of available GPU memory, default 50.00%.
-2. ```men_demand```: The required available GPU memory, default 1024MiB. 
+2. ```men_demand```: The required available GPU memory, default 1024MiB. ```men_demand``` will be ignored if ```usage_demand``` is not ```0```.
 3. ```interval```: Sleep for interval before starting checking, default 20 seconds.
 4. ```execute```: If True, execute the script. If False, do not execute the script and return the available GPU ID. Default False.
 
