@@ -34,3 +34,6 @@ There are two applications as following:
 nohup ./check_gpu_available.py > ./nohup_output.log 2>&1 &
 ```
 2. See [an asynchronous training example](https://github.com/EpicTian/async_train).
+
+# Outputs
+![图片](https://github.com/EpicTian/check_gpu_available/blob/main/output.png)
