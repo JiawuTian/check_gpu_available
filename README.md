@@ -25,3 +25,8 @@ It checks all GPU(s) by GPU ID and sleeps for ```interval``` before starting che
 For checking every GPU, it checks no more than 5 seconds (also be called 5 times) either meeting your demand or turning to next GPU and keeping checking.
 
 # Usage
+There are two application as following:
+1. Set ```execute``` ```True``` and chage ```cmd``` variable, then run the following code in your SSH terminal:
+```shell
+nohup ./check_gpu_available.py > ./nohup_output.log 2>&1 &
+```
