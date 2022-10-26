@@ -20,7 +20,7 @@ Explanation of parameters:
 # How it works
 ```gpu_info()``` will get the GPU information with ID of ```gpu_index```, and return ```power```, ```memory```, ```total_memory```, ```percent```.  
 ```gpu_available()``` performs checking and returns the available GPU ID (if parameter ```execute``` is ```False``` (default)) or executes your script (if parameter ```execute``` is ```True```).  
-```gpu_available()``` 
+```gpu_available()```  will always perform checking until ```waitting``` becomes ```False```, which determined by some conditions ```usage_demand``` or ```men_demand```.
 
 
 
