@@ -16,6 +16,9 @@ Explanation of parameters:
 3. ```interval```: Sleep for interval before starting checking, default 20 seconds.
 4. ```execute```: If True, execute the script. If False, do not execute the script and return the available GPU ID. Default False.
 
+# Requirements
+Require ```torch``` installed. Installation guide can be found [here](https://pytorch.org/get-started/locally/).
+
 
 # How it works
 ```gpu_info()``` will get the GPU information with ID of ```gpu_index```, and return ```power```, ```memory```, ```total_memory```, ```percent```.  
@@ -26,7 +29,7 @@ For checking every GPU, it checks no more than 5 seconds (also be called 5 times
 
 # Usage
 There are two applications as following:
-1. Set ```execute``` ```True``` and chage ```cmd``` variable, then run the following code in your SSH terminal:
+1. Set ```execute``` ```True``` and change ```cmd``` variable, then run the following code in your SSH terminal:
 ```shell
 nohup ./check_gpu_available.py > ./nohup_output.log 2>&1 &
 ```
