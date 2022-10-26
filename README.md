@@ -30,4 +30,4 @@ There are two applications as following:
 ```shell
 nohup ./check_gpu_available.py > ./nohup_output.log 2>&1 &
 ```
-2. See [an asynchronization example](https://github.com/EpicTian/async_train).
+2. See [an asynchronous training example](https://github.com/EpicTian/async_train).
