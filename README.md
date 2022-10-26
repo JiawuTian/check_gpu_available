@@ -1,2 +1,5 @@
-# check_gpu_available
+# How it works
 Check GPU(s) whether available under some conditions.
+
+
+# Usages
