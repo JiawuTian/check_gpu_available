@@ -11,10 +11,11 @@ Explanation of parameters:
 gpu_available(usage_demand: float=50.0, men_demand: float=1024.0, interval: int=20, execute: bool=False)
 ```
 Explanation of parameters: 
-1. ```usage_demand```: The required percentage (%) of available GPU memory, default 50.00%.
-2. ```men_demand```: The required available GPU memory, default 1024MiB. ```men_demand``` will be ignored if ```usage_demand``` is not ```0```.
-3. ```interval```: Sleep for interval before starting checking, default 20 seconds.
-4. ```execute```: If True, execute the script. If False, do not execute the script and return the available GPU ID. Default False.
+1. ```gpu_usage_demand```: The required percentage (%) of available GPU-Utilization, default 50.00%.
+2. ```men_usage_demand```: The required percentage (%) of available GPU memory, default 50.00%. This parameter will be ingored if ```gpu_usage_demand``` is NOT 0.
+3. ```men_demand```: The required available GPU memory, default 1024MiB. This parameter will be ingored if ```gpu_usage_demand``` or ```men_usage_demand``` is NOT 0.
+4. ```interval```: Sleep for interval before starting checking, default 20 seconds.
+5. ```execute```: If True, execute the script. If False, do not execute the script and return the available GPU ID. Default False.
 
 # Requirements
 Require ```torch``` installed. Installation guide can be found [here](https://pytorch.org/get-started/locally/).
@@ -37,3 +38,10 @@ nohup ./check_gpu_available.py > ./nohup_output.log 2>&1 &
 
 # Outputs
 ![图片](https://github.com/EpicTian/check_gpu_available/blob/main/output.png)
+
+# Change logs
+```2022-11-05```
+1. Fix getting memory information bug.
+2. Add getting ```gpu_utli``` information.
+3. Add ```gpu_usage_demand``` condition.
+4. Update explanation of parameters of ```gpu_available()```.
