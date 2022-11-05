@@ -25,7 +25,7 @@ Require ```torch``` installed. Installation guide can be found [here](https://py
 # How it works
 ```gpu_info()``` will get the GPU information with ID of ```gpu_index```, and return ```power```, ```memory```, ```total_memory```, ```percent```.  
 ```gpu_available()``` performs checking and returns the available GPU ID (if parameter ```execute``` is ```False``` (default)) or executes your script (if parameter ```execute``` is ```True```).  
-```gpu_available()```  will always perform checking until ```waitting``` becomes ```False```, which determined by some conditions ```usage_demand``` or ```men_demand```.
+```gpu_available()```  will always perform checking until ```waitting``` becomes ```False```, which determined by some conditions ```gpu_usage_demand``` or ```men_usage_demand``` or ```men_demand```.
 It checks all GPU(s) by GPU ID and sleeps for ```interval``` before starting checking (default 20 seconds) to avoid one GPU FALSE AVAILABE which means in some cases such asynchronization the GPU is loading data or is preparing for other program but meet your demand condition for this GPU at the same time.  
 For checking every GPU, it checks no more than 5 seconds (also be called 5 times) either meeting your demand or turning to next GPU and keeping checking.
 
