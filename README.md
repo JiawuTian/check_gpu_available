@@ -8,7 +8,7 @@ Explanation of parameters:
 1. ```gpu_index```: The ID of GPU.
 
 ```python
-gpu_available(usage_demand: float=50.0, men_demand: float=1024.0, interval: int=20, execute: bool=False)
+gpu_available(gpu_usage_demand:float=50.0, men_usage_demand: float=50.0, men_demand: float=1024.0, interval: int=20, execute: bool=False)
 ```
 Explanation of parameters: 
 1. ```gpu_usage_demand```: The required percentage (%) of available GPU-Utilization, default 50.00%.
