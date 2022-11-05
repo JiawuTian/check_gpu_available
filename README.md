@@ -42,7 +42,7 @@ nohup ./check_gpu_available.py > ./nohup_output.log 2>&1 &
 
 # Change logs
 ```2022-11-05```
-1. Fix getting memory information bug.
-2. Add getting ```gpu_utli``` information.
-3. Add ```gpu_usage_demand``` condition.
+1. Fix ```gpu_info()``` getting memory information bug.
+2. Add getting ```gpu_utli``` information in ```gpu_info()```.
+3. Add ```gpu_usage_demand``` condition in ```gpu_available()```.
 4. Update explanation of parameters of ```gpu_available()```.
