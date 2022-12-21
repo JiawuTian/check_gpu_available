@@ -46,3 +46,8 @@ nohup ./check_gpu_available.py > ./nohup_output.log 2>&1 &
 2. Add getting ```gpu_utli``` information in ```gpu_info()```.
 3. Add ```gpu_usage_demand``` condition in ```gpu_available()```.
 4. Update explanation of parameters of ```gpu_available()```.
+
+
+```2022-12-21```
+1. Improve ```gpu_info()``` getting GPU ID list.
+2. Add ```reverse``` parameter in ```gpu_available()```.
