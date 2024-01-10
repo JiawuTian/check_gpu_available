@@ -41,6 +41,9 @@ nohup ./check_gpu_available.py > ./nohup_output.log 2>&1 &
 ![图片](https://github.com/EpicTian/check_gpu_available/blob/main/output.png)
 
 # Change logs
+```2024-01-10```
+1. 
+
 ```2022-11-05```
 1. Fix ```gpu_info()``` getting memory information bug.
 2. Add getting ```gpu_utli``` information in ```gpu_info()```.
