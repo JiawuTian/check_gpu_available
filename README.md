@@ -4,15 +4,14 @@ Script ```check_gpu_available.py``` contains the following functions:
 ```python
 gpu_info(gpu_index)
 ```
-Explanation of parameters: 
+Explanation of parameters for ```gpu_info```: 
 1. ```gpu_index```: The ID of GPU.
-
 
 ```python
 gpu_available(gpu_usage_demand: float=50.0, men_usage_demand: float=50.0, 
               men_demand: float=1024.0, interval: int=20, execute: bool=False)
 ```
-Explanation of parameters: 
+Explanation of parameters for ```gpu_available```: 
 1. ```gpu_usage_demand```: The required percentage (%) of available GPU-Utilization, default 50.00%.
 2. ```men_usage_demand```: The required percentage (%) of available GPU memory, default 50.00%. This parameter will be ingored if ```gpu_usage_demand``` is NOT 0.
 3. ```men_demand```: The required available GPU memory, default 1024MiB. This parameter will be ingored if ```gpu_usage_demand``` or ```men_usage_demand``` is NOT 0.
