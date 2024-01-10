@@ -7,6 +7,7 @@ gpu_info(gpu_index)
 Explanation of parameters: 
 1. ```gpu_index```: The ID of GPU.
 
+
 ```python
 gpu_available(gpu_usage_demand: float=50.0, men_usage_demand: float=50.0, 
               men_demand: float=1024.0, interval: int=20, execute: bool=False)
@@ -44,13 +45,14 @@ nohup ./check_gpu_available.py > ./nohup_output.log 2>&1 &
 ```2024-01-10```
 1. 
 
+
+```2022-12-21```
+1. Improve ```gpu_info()``` getting GPU ID list.
+2. Add ```reverse``` parameter in ```gpu_available()```.
+
+
 ```2022-11-05```
 1. Fix ```gpu_info()``` getting memory information bug.
 2. Add getting ```gpu_utli``` information in ```gpu_info()```.
 3. Add ```gpu_usage_demand``` condition in ```gpu_available()```.
 4. Update explanation of parameters of ```gpu_available()```.
-
-
-```2022-12-21```
-1. Improve ```gpu_info()``` getting GPU ID list.
-2. Add ```reverse``` parameter in ```gpu_available()```.
