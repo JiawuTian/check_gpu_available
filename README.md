@@ -19,7 +19,7 @@ Explanation of parameters for ```gpu_available```:
 4. ```least_mem_usage```: The least percentage (%) of available GPU memory, default 20.00%.
 5. ```interval```: Sleep for interval before starting checking, default 20 seconds.
 6. ```execute```: If True, execute the script. If False, do not execute the script and return the available GPU ID. Default False.
-7. ```reversed_ids```: Reverse the GPU ID list. Default False.
+7. ```reversed_ids```: Reverse the GPU ID list. Default False. This parameter will be ignored if "random_ids" is set to True.
 8. ```random_ids```: Shuffle the GPU ID list. Default True.
 
 # Requirements
@@ -44,7 +44,7 @@ nohup ./check_gpu_available.py > ./nohup_output.log 2>&1 &
 # Outputs
 ![图片](https://github.com/EpicTian/check_gpu_available/blob/main/output.png)
 
-# Change logs
+# Update logs
 ```2024-01-11```
 1. Remove ```reverse``` parameter of ```gpu_available()```.
 2. Add ```least_mem_usage```, ```reversed_ids``` and ```random_ids``` parameter to ```gpu_available()```.
