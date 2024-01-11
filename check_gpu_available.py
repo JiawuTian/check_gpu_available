@@ -32,10 +32,6 @@ def gpu_info(gpu_index):
         if 'Power Limit' in gpu_status[i]:
             limit_power = float(gpu_status[i].split(' ')[-2])
     men_percent = (memory / total_memory) * 100.0
-    # gpu_info_dict = {'GPU ID': gpu_index, 'Power': power, 'Limited Power': limit_power, 
-    #                'Memory': memory, 'Total Memory': total_memory, 'Memory Percent': men_percent,
-    #                'GPU Utilization': gpu_utli}
-    # return gpu_info_dict
     return power, limit_power, memory, total_memory, men_percent, gpu_utli
 
 
@@ -55,6 +51,8 @@ def gpu_available(gpu_usage_demand:float=50.0, men_usage_demand:float=50.0, men_
     # 6. execute: If True, execute the script. If False, do NOT execute the script 
     #             and return the available GPU ID. Default False.
     # 7. reversed_ids: If True, reverse the GPU ID list checked. Default False.
+    #                  This parameter will be ignored if "random_ids" is set to True.
+    # 8. random_ids: If True, shuffle the GPU ID list. Default True.
     if not 0.0 <= gpu_usage_demand <= 100.0:
         raise ValueError("Invalid gpu_usage_demand value: {:.2f}%.".format(gpu_usage_demand))
     if not 0.0 <= men_usage_demand <= 100.0:
