@@ -8,15 +8,19 @@ Explanation of parameters for ```gpu_info```:
 1. ```gpu_index```: The ID of GPU.
 
 ```python
-gpu_available(gpu_usage_demand: float=50.0, men_usage_demand: float=50.0, 
-              men_demand: float=1024.0, interval: int=20, execute: bool=False)
+gpu_available(gpu_usage_demand:float=50.0, men_usage_demand:float=50.0, men_demand:float=1024.0,
+              least_mem_usage:float=20.0, interval: int=20, execute: bool=False,
+              reversed_ids:bool=False, random_ids:bool=True)
 ```
 Explanation of parameters for ```gpu_available```: 
 1. ```gpu_usage_demand```: The required percentage (%) of available GPU-Utilization, default 50.00%.
 2. ```men_usage_demand```: The required percentage (%) of available GPU memory, default 50.00%. This parameter will be ingored if ```gpu_usage_demand``` is NOT 0.
 3. ```men_demand```: The required available GPU memory, default 1024MiB. This parameter will be ingored if ```gpu_usage_demand``` or ```men_usage_demand``` is NOT 0.
-4. ```interval```: Sleep for interval before starting checking, default 20 seconds.
-5. ```execute```: If True, execute the script. If False, do not execute the script and return the available GPU ID. Default False.
+4. ```least_mem_usage```: The least percentage (%) of available GPU memory, default 20.00%.
+5. ```interval```: Sleep for interval before starting checking, default 20 seconds.
+6. ```execute```: If True, execute the script. If False, do not execute the script and return the available GPU ID. Default False.
+7. ```reversed_ids```: Reverse the GPU ID list. Default False.
+8. ```random_ids```: Shuffle the GPU ID list. Default True.
 
 # Requirements
 Require ```torch``` installed. Installation guide can be found [here](https://pytorch.org/get-started/locally/).
@@ -41,17 +45,18 @@ nohup ./check_gpu_available.py > ./nohup_output.log 2>&1 &
 ![图片](https://github.com/EpicTian/check_gpu_available/blob/main/output.png)
 
 # Change logs
-```2024-01-10```
-1. 
+```2024-01-11```
+1. Remove ```reverse``` parameter of ```gpu_available()```.
+2. Add ```least_mem_usage```, ```reversed_ids``` and ```random_ids``` parameter to ```gpu_available()```.
 
 
 ```2022-12-21```
 1. Improve ```gpu_info()``` getting GPU ID list.
-2. Add ```reverse``` parameter in ```gpu_available()```.
+2. Add ```reverse``` parameter to ```gpu_available()```.
 
 
 ```2022-11-05```
 1. Fix ```gpu_info()``` getting memory information bug.
-2. Add getting ```gpu_utli``` information in ```gpu_info()```.
-3. Add ```gpu_usage_demand``` condition in ```gpu_available()```.
+2. Add getting ```gpu_utli``` information to ```gpu_info()```.
+3. Add ```gpu_usage_demand``` condition to ```gpu_available()```.
 4. Update explanation of parameters of ```gpu_available()```.
